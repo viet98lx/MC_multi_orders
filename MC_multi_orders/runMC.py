@@ -124,7 +124,7 @@ if __name__ == '__main__':
         print("Save model in ", saved_file)
         sp.save_npz(saved_file, transition_matrix)
 
-    mc_model = MarkovChain(item_dict, reversed_item_dict, item_freq_dict, w_behavior, transition_matrix, mc_order)
+    mc_model = MarkovChain(item_dict, list_prev_entries[:-1], list_freq_entries[:-1], list_reversed_entries[:-1], list_trans_matrix, w_behavior, mc_order)
     topk = 50
     print('Predict to outfile')
     predict_file = os.path.join(o_dir, 'predict_'+model_name+'.txt')
