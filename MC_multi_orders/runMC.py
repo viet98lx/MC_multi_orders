@@ -110,7 +110,7 @@ if __name__ == '__main__':
     list_reversed_entries = [prev_reversed_item_dict]
     list_trans_matrix = []
     for i in range(1,mc_order+1):
-        transition_matrix, prev_freq_dict, prev_entry_dict, prev_reversed_item_dict = MC_utils.calculate_transition_matrix_at_order(train_instances, item_dict, prev_entry_dict, prev_freq_dict, prev_reversed_item_dict, w_behavior, mc_order)
+        transition_matrix, prev_freq_dict, prev_entry_dict, prev_reversed_item_dict = MC_utils.calculate_transition_matrix_at_order(train_instances, item_dict, prev_entry_dict, prev_freq_dict, prev_reversed_item_dict, w_behavior, i)
         list_prev_entries.append(prev_entry_dict)
         list_freq_entries.append(prev_freq_dict)
         list_reversed_entries.append(prev_reversed_item_dict)
